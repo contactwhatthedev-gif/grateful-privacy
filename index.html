@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy – Grateful</title>
+    <style>
+        :root {
+            --bg: #fff;
+            --text: #1a1a1a;
+            --muted: #666;
+            --accent: #e67e22;
+            --card: #f8f8f8;
+            --border: #e0e0e0;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #1a1a1a;
+                --text: #e0e0e0;
+                --muted: #999;
+                --card: #252525;
+                --border: #333;
+            }
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg); color: var(--text); line-height: 1.7;
+            max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem;
+        }
+        h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+        h2 { font-size: 1.2rem; margin: 2rem 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 2px solid var(--accent); }
+        p, li { margin-bottom: 0.6rem; color: var(--text); }
+        .muted { color: var(--muted); font-size: 0.9rem; }
+        .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.2rem; margin: 1rem 0; }
+        .lang-toggle { position: absolute; top: 1.5rem; right: 1.5rem; display: flex; gap: 0.5rem; }
+        .lang-btn { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 0.3rem 0.8rem; cursor: pointer; font-size: 0.85rem; color: var(--text); }
+        .lang-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+        .hidden { display: none; }
+        header { position: relative; }
+        strong { color: var(--accent); }
+        a { color: var(--accent); }
+        @media (max-width: 600px) {
+            body { padding: 1.5rem 1rem; }
+            .lang-toggle { position: static; justify-content: flex-end; margin-bottom: 1rem; }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="lang-toggle">
+        <button class="lang-btn active" onclick="switchLang('es')">ES</button>
+        <button class="lang-btn" onclick="switchLang('en')">EN</button>
+    </div>
+    <h1 class="es">Política de Privacidad</h1>
+    <h1 class="en hidden">Privacy Policy</h1>
+    <p class="muted es">Última actualización: 31 de julio de 2026</p>
+    <p class="muted en hidden">Last updated: July 31, 2026</p>
+</header>
+
+<section>
+    <h2 class="es">1. Responsable</h2>
+    <h2 class="en hidden">1. Data Controller</h2>
+    <p class="es">Grateful ("la App") es desarrollada y operada como proyecto independiente. Para cualquier consulta sobre privacidad: <a href="mailto:grateful.privacy@proton.me">grateful.privacy@proton.me</a>.</p>
+    <p class="en hidden">Grateful ("the App") is developed and operated as an independent project. For privacy inquiries: <a href="mailto:grateful.privacy@proton.me">grateful.privacy@proton.me</a>.</p>
+</section>
+
+<section>
+    <h2 class="es">2. Datos que recogemos</h2>
+    <h2 class="en hidden">2. Data We Collect</h2>
+    <div class="card">
+        <p class="es"><strong>Contenido del diario:</strong> textos de gratitud, fotos (opcionales), ubicación (opcional). Se almacenan localmente en tu dispositivo.</p>
+        <p class="en hidden"><strong>Journal content:</strong> gratitude texts, photos (optional), location (optional). Stored locally on your device.</p>
+        <p class="es"><strong>Cuenta Google (opcional):</strong> si inicias sesión, recogemos tu nombre y email para sincronizar tus entradas en la nube.</p>
+        <p class="en hidden"><strong>Google Account (optional):</strong> if you sign in, we collect your name and email to sync your entries to the cloud.</p>
+        <p class="es"><strong>Datos de uso:</strong> puntuación de ánimo generada por IA, rachas de escritura, logros.</p>
+        <p class="en hidden"><strong>Usage data:</strong> AI-generated mood score, writing streaks, achievements.</p>
+    </div>
+    <p class="es"><strong>No recogemos:</strong> contactos, historial de navegación, ubicación precisa en segundo plano, ni ningún dato sin tu consentimiento explícito.</p>
+    <p class="en hidden"><strong>We do NOT collect:</strong> contacts, browsing history, background location, or any data without your explicit consent.</p>
+</section>
+
+<section>
+    <h2 class="es">3. Cómo almacenamos tus datos</h2>
+    <h2 class="en hidden">3. How We Store Your Data</h2>
+    <p class="es">Todas las entradas se guardan <strong>localmente</strong> en tu dispositivo usando Room (SQLite). Las fotos se almacenan en el almacenamiento interno privado de la app.</p>
+    <p class="en hidden">All entries are stored <strong>locally</strong> on your device using Room (SQLite). Photos are stored in the app's private internal storage.</p>
+    <p class="es">Si inicias sesión con Google, tus entradas se sincronizan con <strong>Firestore (Firebase)</strong>, una base de datos en la nube de Google. Cada usuario solo puede acceder a sus propios datos mediante reglas de seguridad.</p>
+    <p class="en hidden">If you sign in with Google, your entries sync to <strong>Firestore (Firebase)</strong>, Google's cloud database. Each user can only access their own data through security rules.</p>
+</section>
+
+<section>
+    <h2 class="es">4. Servicios de terceros</h2>
+    <h2 class="en hidden">4. Third-Party Services</h2>
+    <p class="es">La App utiliza los siguientes servicios de terceros que pueden recoger datos de forma independiente:</p>
+    <p class="en hidden">The App uses the following third-party services which may collect data independently:</p>
+    <div class="card">
+        <p class="es"><strong>Firebase (Google)</strong> — Autenticación, base de datos en la nube, análisis de uso anónimo e informes de errores. <a href="https://firebase.google.com/support/privacy">Política de Firebase</a></p>
+        <p class="en hidden"><strong>Firebase (Google)</strong> — Authentication, cloud database, anonymous usage analytics, and crash reporting. <a href="https://firebase.google.com/support/privacy">Firebase Privacy</a></p>
+        <p class="es"><strong>Gemini AI (Google)</strong> — Análisis del estado de ánimo de tus entradas y generación de notificaciones personalizadas. Los textos se envían a la API de Gemini para su procesamiento. <a href="https://ai.google.dev/gemini-api/privacy">Política de Gemini</a></p>
+        <p class="en hidden"><strong>Gemini AI (Google)</strong> — Mood analysis of your entries and personalized notification generation. Texts are sent to the Gemini API for processing. <a href="https://ai.google.dev/gemini-api/privacy">Gemini Privacy</a></p>
+        <p class="es"><strong>AdMob (Google)</strong> — Anuncios dentro de la app. AdMob puede usar el ID de publicidad de tu dispositivo para mostrar anuncios personalizados. Puedes desactivar la personalización en Ajustes → Google → Anuncios. <a href="https://policies.google.com/privacy">Política de Google</a></p>
+        <p class="en hidden"><strong>AdMob (Google)</strong> — In-app advertisements. AdMob may use your device's advertising ID to show personalized ads. You can opt out in Settings → Google → Ads. <a href="https://policies.google.com/privacy">Google Privacy</a></p>
+    </div>
+</section>
+
+<section>
+    <h2 class="es">5. Tus derechos</h2>
+    <h2 class="en hidden">5. Your Rights</h2>
+    <p class="es">Puedes en cualquier momento:</p>
+    <p class="en hidden">You may at any time:</p>
+    <ul>
+        <li class="es"><strong>Eliminar tus datos:</strong> cierra sesión desde Ajustes → Cuenta. Esto borra todas tus entradas locales. Los datos en Firestore se eliminan al cerrar sesión.</li>
+        <li class="en hidden"><strong>Delete your data:</strong> sign out from Settings → Account. This deletes all local entries. Firestore data is removed on sign-out.</li>
+        <li class="es"><strong>No usar la IA:</strong> desactiva las notificaciones IA desde Ajustes. Sin sesión de Google, la IA no se usa (solo análisis local).</li>
+        <li class="en hidden"><strong>Opt out of AI:</strong> disable AI notifications from Settings. Without a Google session, AI is not used (local analysis only).</li>
+        <li class="es"><strong>Usar la app sin cuenta:</strong> todas las funciones básicas funcionan sin iniciar sesión. Solo la sincronización en la nube y la IA requieren autenticación.</li>
+        <li class="en hidden"><strong>Use the app without an account:</strong> all core features work without signing in. Only cloud sync and AI require authentication.</li>
+        <li class="es"><strong>Solicitar información:</strong> escríbenos a <a href="mailto:grateful.privacy@proton.me">grateful.privacy@proton.me</a> para cualquier consulta sobre tus datos.</li>
+        <li class="en hidden"><strong>Request information:</strong> email us at <a href="mailto:grateful.privacy@proton.me">grateful.privacy@proton.me</a> for any data inquiries.</li>
+    </ul>
+</section>
+
+<section>
+    <h2 class="es">6. Seguridad</h2>
+    <h2 class="en hidden">6. Security</h2>
+    <p class="es">Implementamos certificate pinning para las conexiones con los servicios de Google. Los datos en tránsito se cifran mediante HTTPS. La base de datos local está protegida por el sandbox de Android.</p>
+    <p class="en hidden">We implement certificate pinning for connections to Google services. Data in transit is encrypted via HTTPS. The local database is protected by Android's app sandbox.</p>
+</section>
+
+<section>
+    <h2 class="es">7. Cambios en esta política</h2>
+    <h2 class="en hidden">7. Changes to This Policy</h2>
+    <p class="es">Cualquier cambio se reflejará en esta página. Te notificaremos dentro de la app si los cambios son significativos.</p>
+    <p class="en hidden">Any changes will be reflected on this page. We will notify you within the app if changes are significant.</p>
+</section>
+
+<footer style="margin-top:3rem;padding-top:1rem;border-top:1px solid var(--border);">
+    <p class="muted es">© 2026 Grateful. Todos los derechos reservados.</p>
+    <p class="muted en hidden">© 2026 Grateful. All rights reserved.</p>
+</footer>
+
+<script>
+    function switchLang(lang) {
+        document.querySelectorAll('.es,.en').forEach(el => {
+            el.classList.toggle('hidden', !el.classList.contains(lang));
+        });
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.textContent.trim().toLowerCase() === lang);
+        });
+    }
+</script>
+</body>
+</html>
